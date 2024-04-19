@@ -1,1 +1,4 @@
 /dalle_venv
+.venv
+__pycache__/
+indian_temples/*

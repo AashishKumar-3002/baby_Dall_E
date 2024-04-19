@@ -1,7 +1,8 @@
-openai
+openai==0.28
 torch
 torchvision
 torchaudio
 opencv-python
 numpy
 matplotlib
+dotenv-python
