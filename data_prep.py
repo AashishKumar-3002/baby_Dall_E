@@ -23,6 +23,21 @@ class CustomDataset(Dataset):
         """
         return [os.path.join(root, file) for root, dirs, files in os.walk(self.root_dir) for file in files]
     
+    # Modify generate_prompt method for fine-tuning
+    def generate_prompt(self, image_path, fine_tuning=True):
+        """
+        Generates a prompt based on the image path, considering fine-tuning objectives.
+        Parameters:
+        - image_path (str): Path to the image.
+        - fine_tuning (bool): Flag indicating fine-tuning context.
+        Returns:
+        - prompt (str): Generated prompt.
+        """
+        if fine_tuning:
+            return f"Fine-tune the model to highlight features in {image_path}"
+        else:
+            return f"Generate an image based on the contents of {image_path}"
+    
     def __len__(self):
         """
         Returns the total number of images in the dataset.

@@ -16,8 +16,6 @@ print(f"Number of images in dataset: {len(custom_dataset)}")
 image_paths = custom_dataset.img_paths
 
 
-
-
 # Train DALL·E
 #train in the batch of 10
 
